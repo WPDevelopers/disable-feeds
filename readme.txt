@@ -37,6 +37,9 @@ In `Settings -> Reading` you will find an option to allow global feeds. All othe
 
 == Changelog ==
 
+= 1.4.2 =
+* Fix potential security issue when redirecting feeds.
+
 = 1.4 =
 * Added BBPress support, thanks to Matthew Sigley.
 
