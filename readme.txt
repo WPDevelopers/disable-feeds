@@ -1,8 +1,8 @@
 === Disable Feeds ===
 Contributors: solarissmoke
 Tags: disable, rss, atom, rdf, feeds
-Requires at least: 3.6
-Tested up to: 4.2
+Requires at least: 4.0
+Tested up to: 4.9
 Stable tag: trunk
 
 Disables all RSS/Atom/RDF feeds on your WordPress site.
@@ -36,6 +36,12 @@ In `Settings -> Reading` you will find an option to turn off redirection and iss
 In `Settings -> Reading` you will find an option to allow global feeds. All other feeds (individual post comments, archives, search, category etc.) will still be disabled.
 
 == Changelog ==
+
+= 1.4.4 =
+* Add translation support.
+
+= 1.4.3 =
+* Compatiblity for for WP 3.6 when feed URLs are set to return a 404 response.
 
 = 1.4.2 =
 * Fix potential security issue when redirecting feeds.
