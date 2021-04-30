@@ -3,7 +3,9 @@
 Plugin Name: Disable Feeds
 Plugin URI: https://wordpress.org/plugins/disable-feeds/
 Description: Disable all RSS/Atom feeds on your WordPress site.
-Version: 1.4.4
+Version: 1.4.5
+Requires at least: 5.5
+Requires PHP:      7.3
 Author: Samir Shah, BBpress support by Matthew Sigley
 Author URI: http://rayofsolaris.net/
 License: GPLv2 or later
@@ -49,7 +51,7 @@ class Disable_Feeds {
 
 	function settings_field() {
 		$redirect = $this->redirect_status();
-		echo '<p>' . __('The <em>Disable Feeds</em> plugin is active, By default, all feeds are disabled, and all requests for feeds are redirected to the corresponding HTML content. You can tweak this behaviour below.', 'disable-feeds') . '</p>';
+		echo '<p>' . __('The <em>Disable Feeds</em> plugin is active, by default, all feeds are disabled, and all requests for feeds are redirected to the corresponding HTML content. You can tweak this behaviour below.', 'disable-feeds') . '</p>';
 		echo '<p><input type="radio" name="disable_feeds_redirect" value="on" id="disable_feeds_redirect_yes" class="radio" ' . checked( $redirect, 'on', false ) . '/><label for="disable_feeds_redirect_yes"> ' . __('Redirect feed requests to corresponding HTML content', 'disable-feeds') . '</label>';
 		echo '<br /><input type="radio" name="disable_feeds_redirect" value="off" id="disable_feeds_redirect_no" class="radio" ' . checked( $redirect, 'off', false ) . '/><label for="disable_feeds_redirect_no"> ' . __('Issue a Page Not Found (404) error for feed requests', 'disable-feeds') . '</label></p>';
 		echo '<p><input type="checkbox" name="disable_feeds_allow_main" value="on" id="disable_feeds_allow_main" ' . checked( $this->allow_main(), true, false ) . '/><label for="disable_feeds_allow_main"> ' . __('Do not disable the <strong>global post feed</strong> and <strong>global comment feed</strong>', 'disable-feeds') . '</label></p>';
