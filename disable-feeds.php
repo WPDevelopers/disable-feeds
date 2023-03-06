@@ -3,7 +3,7 @@
 Plugin Name: Disable Feeds
 Plugin URI: https://wordpress.org/plugins/disable-feeds/
 Description: Disable all RSS/Atom feeds on your WordPress site.
-Version: 1.4.4
+Version: 1.4.5
 Author: Samir Shah, BBpress support by Matthew Sigley
 Author URI: http://rayofsolaris.net/
 License: GPLv2 or later
@@ -42,7 +42,7 @@ class Disable_Feeds {
 	}
 
 	function admin_setup() {
-		add_settings_field( 'disable_feeds_redirect', 'Disable Feeds Plugin', array( $this, 'settings_field' ), 'reading' );
+		add_settings_field( 'disable_feeds_redirect', __('Disable Feeds Plugin', 'disable-feeds' ), array( $this, 'settings_field' ), 'reading' );
 		register_setting( 'reading', 'disable_feeds_redirect' );
 		register_setting( 'reading', 'disable_feeds_allow_main' );
 	}
